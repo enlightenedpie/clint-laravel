@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('causelabs');
-});
+Route::view('/','causelabs');

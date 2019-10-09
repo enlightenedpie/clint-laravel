@@ -63,9 +63,7 @@
             }
         </style>
     </head>
-    <body>
-        <div class="title m-b-md">
-            Allo monde
-        </div>
+    <body class="flex-center full-height">
+        <div class="title">Allo monde</div>
     </body>
 </html>
