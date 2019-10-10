@@ -13,7 +13,5 @@ class People
 		return self::$people;
 	}
 
-	public static function store() {
-		
-	}
+	public static function create($data) {}
 }
