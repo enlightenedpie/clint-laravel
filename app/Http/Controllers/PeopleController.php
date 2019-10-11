@@ -14,16 +14,15 @@ class PeopleController extends Controller
 	}
 
 	public function create(Request $request) {
-		$data = json_decode($request->json(), true);
 
-		$vald = Validator::make($data,[
+		$vald = Validator::make($request->all(),[
 			'first_name' => 'required|string',
 			'last_name' => 'required|string',
-			'age' => 'required|digits_between:0,99',
+			'age' => 'required|digits_between:0,120',
 			'email' => 'required|email|unique:users,email',
 			'secret' => 'required|string'
 		])->validate();
 
-		return response()->json(People::create($data),201);
+		return response()->json(People::create($request),201);
 	}
 }

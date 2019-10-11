@@ -15,4 +15,4 @@ use App\Http\Controllers\PeopleController;
 */
 
 Route::get('people', 'PeopleController@all');
-Route::post('people', 'PeopleController@store');
+Route::post('people', 'PeopleController@store')->middleware('json');
