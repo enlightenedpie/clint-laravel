@@ -15,6 +15,7 @@ class People
 	}
 
 	public static function create($request) {
+		// array sorting logic
 
 		return DB::table('people')->insert(
 			['json'=>$data,'ip_address'=>$ip,'timestamp'=>time()]
